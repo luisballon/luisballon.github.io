@@ -10,6 +10,9 @@ tags: [Examen Final, evaluation]     # TAG names should always be lowercase
 
 1. ¿Cómo podrías utilizar Procmon y Sysmon juntos para investigar la actividad de un proceso sospechoso? (5 ptos)
 
+Procmon: Cuya descripcion real es Process Monitor, es una herramienta avanzada de monitoreo de sistemas Windows que captura eventos en tiempo real relacionados con la Actividad del Sistema de Archivos y los registros de windows
+[https://learn.microsoft.com/en-us/sysinternals/downloads/procmon](https://hcisj.com/data/file/article/2023080005/13-39.pdf)_
+
     - Explica los tipos de eventos que Procmon y Sysmon pueden capturar de forma complementaria.
 
     - Proporciona un ejemplo práctico de cómo identificar un posible comportamiento malicioso en un proceso utilizando ambas herramientas.
