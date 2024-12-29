@@ -1,8 +1,8 @@
 ---
-title: Clase 09 - Advanced Persistent Threats (APTs)
+title: Clase 9 - Advanced Persistent Threats (APTs)
 date: 2024-11-07 00:20:00 -0500
 categories: [Cybersecurity,Ethical Hacking,Pentesting,Exploitation Techniques]
-tags: [Examen Parcial, evaluation]     # TAG names should always be lowercase
+tags: [elasticsearch, soluciones siem]     # TAG names should always be lowercase
 ---
 
 <!-- <hr style="border: none; height: 10px; background-color: #003b00;" />
