@@ -305,6 +305,57 @@ En la arquitectura del sistema de archivos NTFS, los archivos poseen una estruct
 
 ### 4. En Sysmon, ¿qué ventajas ofrece el uso de filtros avanzados en comparación con capturar todos los eventos de forma indiscriminada? (5 ptos)
 
+Beneficios de los Filtros Avanzados en Sysmon
+Estrategias de Monitoreo Inteligente
+Los filtros avanzados en Sysmon representan una aproximación selectiva y estratégica para la captura de eventos del sistema, ofreciendo múltiples ventajas operativas:
+
+a. Depuración Inteligente de Información
+Concepto: Eliminación de eventos irrelevantes
+Beneficio: Simplificación de la detección de actividades críticas y potencialmente sospechosas
+b. Optimización de Recursos Computacionales
+Impacto: Reducción de la carga del sistema
+Resultado: Mejora del rendimiento y eficiencia en el análisis de eventos
+c. Focalización del Análisis de Seguridad
+Método: Concentración en eventos significativos
+Ventaja: Aceleración en la identificación y respuesta a incidentes de seguridad
+d. Gestión Económica de Almacenamiento
+Consecuencia: Minimización de registros
+Beneficio: Reducción de costos de almacenamiento y procesamiento
+e. Personalización de la Detección de Amenazas
+Enfoque: Adaptación a las particularidades del entorno organizacional
+Resultado: Incremento de la efectividad de las medidas de seguridad
+
+*Conclusión*
+Los filtros avanzados en Sysmon no son simplemente una herramienta técnica, sino una estrategia inteligente de monitoreo que permite una gestión más eficiente, selectiva y enfocada de los eventos del sistema.
+
 #### - Investiga cómo un mal diseño de filtros podría afectar el desempeño del sistema y la calidad de los logs.
 
 #### - Proporciona un ejemplo de un filtro efectivo para reducir ruido en un entorno de producción.
+
+````bash
+<Sysmon schemaversion="4.80">
+  <EventFiltering>
+    <!-- Excluir procesos de sistema rutinarios -->
+    <ProcessCreate onmatch="exclude">
+      <Image condition="contains">\\Windows\\System32\</Image>
+      <Image condition="contains">\\Program Files\\</Image>
+      <ParentImage condition="contains">\\Windows\\explorer.exe</ParentImage>
+    </ProcessCreate>
+
+    <!-- Monitorear procesos críticos -->
+    <ProcessCreate onmatch="include">
+      <Image condition="contains">powershell.exe</Image>
+      <Image condition="contains">cmd.exe</Image>
+      <Image condition="contains">wscript.exe</Image>
+      <Image condition="contains">cscript.exe</Image>
+    </ProcessCreate>
+
+    <!-- Alertar sobre ejecuciones desde ubicaciones sospechosas -->
+    <ProcessCreate onmatch="include">
+      <Image condition="contains">C:\Users\Public\</Image>
+      <Image condition="contains">C:\Temp\</Image>
+      <Image condition="contains">C:\Windows\Temp\</Image>
+    </ProcessCreate>
+  </EventFiltering>
+</Sysmon>
+````
