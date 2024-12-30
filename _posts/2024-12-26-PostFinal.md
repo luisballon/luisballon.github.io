@@ -330,6 +330,12 @@ Los filtros avanzados en Sysmon no son simplemente una herramienta técnica, sin
 
 #### - Investiga cómo un mal diseño de filtros podría afectar el desempeño del sistema y la calidad de los logs.
 
+La configuración inadecuada de filtros en sistemas de monitoreo puede generar consecuencias críticas para la infraestructura de seguridad. Un diseño deficiente provoca una sobrecarga computacional significativa, saturando los recursos del sistema con la captura excesiva de eventos, lo que deteriora el rendimiento y complejiza la gestión de información de seguridad. Esta saturación informativa dificulta la identificación de eventos realmente relevantes, consumiendo recursos valiosos y aumentando exponencialmente el tiempo de análisis.
+
+Los riesgos se profundizan cuando los filtros son demasiado restrictivos, generando vulnerabilidades por omisión de eventos críticos. La pérdida de visibilidad sobre actividades potencialmente maliciosas puede crear puntos ciegos en la detección temprana de amenazas, comprometiendo la capacidad de respuesta y prevención. Esta limitación no solo afecta la eficacia del monitoreo, sino que también puede representar un riesgo significativo para la integridad de los sistemas.
+
+El impacto trasciende lo técnico, afectando directamente el cumplimiento normativo y los procesos de auditoría. La degradación en la calidad de los registros puede generar complicaciones legales y dificultar la trazabilidad de incidentes, poniendo en riesgo la conformidad con estándares de seguridad. Por ello, es fundamental implementar filtros inteligentes que mantengan un equilibrio óptimo entre la reducción de ruido informático y la preservación de una cobertura comprehensiva de monitoreo.
+
 #### - Proporciona un ejemplo de un filtro efectivo para reducir ruido en un entorno de producción.
 
 ````bash
