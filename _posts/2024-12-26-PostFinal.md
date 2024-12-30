@@ -303,6 +303,27 @@ En la arquitectura del sistema de archivos NTFS, los archivos poseen una estruct
 
 #### - Especifica qué operaciones de Procmon están relacionadas con este tipo de actividad.
 
+*Identificación de Interacciones Potencialmente Maliciosas:*
+
+Las operaciones del sistema que involucran manipulación de archivos con estructura de flujos alternativos (nombre_archivo:stream) pueden ser indicadores cruciales de comportamientos anómalos o intentos de ocultamiento digital[5]. Tres operaciones fundamentales merecen especial atención:
+
+*Operaciones Críticas de Archivo*<br>
+
+a. WriteFile<br>
+- Escritura en flujos alternativos
+- Potencial introducción de contenido oculto
+- Mecanismo de inserción de datos maliciosos<br>
+
+b. SetInformationFile<br>
+- Modificación de metadatos de archivo
+- Alteración de propiedades de flujos
+- Posible reconfiguración encubierta<br>
+
+c. CreateFile<br>
+- Generación de nuevos flujos de datos
+- Creación de estructuras de almacenamiento alternativo
+- Punto de entrada para técnicas de ocultamiento
+
 ### 4. En Sysmon, ¿qué ventajas ofrece el uso de filtros avanzados en comparación con capturar todos los eventos de forma indiscriminada? (5 ptos)
 
 Beneficios de los Filtros Avanzados en Sysmon
@@ -374,3 +395,5 @@ El impacto trasciende lo técnico, afectando directamente el cumplimiento normat
 *[3] Huang, Y. T., Guo, Y. R., Wong, G. W., & Chen, M. C. 2024. A Cascade Approach for APT Campaign Attribution in System Event Logs: Technique Hunting and Subgraph Matching. arXiv preprint arXiv:2410.22602.*
 
 *[4] Breed, J., Baker, P., Chu, K. D., Starr, C., Fox, J., & Baitinger, M. 2000. The spacecraft emergency response system (SERS) for autonomous mission operations. Reducing the Cost of Spacecraft Ground Systems and Operations, 2021*
+
+*[5] K. Harris, “Monitoring NTFS Streams with Procmon,” Forensic Analysis Weekly, 2023.*
