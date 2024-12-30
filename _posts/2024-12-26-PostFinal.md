@@ -49,7 +49,7 @@ tags: [Examen Final, evaluation]     # TAG names should always be lowercase
 
 Antes de explicar como se podria utilizar Procmon y Sysmon se dará una breve concepto de ambos terminos.
 
--   **Procmon**: Cuya descripcion real es Process Monitor, es una herramienta avanzada de monitoreo de sistemas Windows que captura eventos en tiempo real relacionados con la Actividad del Sistema de Archivos y los registros de windows. Como indica Mark R. en su libro Windows Internals, Procmon es una herramienta de monitoreo de eventos del sistema el cual captura actividades en tiempo real del kernel.
+-   **Procmon**: Cuya descripcion real es Process Monitor, es una herramienta avanzada de monitoreo de sistemas Windows que captura eventos en tiempo real relacionados con la Actividad del Sistema de Archivos y los registros de windows. Como indica Mark R.[1] en su libro Windows Internals, Procmon es una herramienta de monitoreo de eventos del sistema el cual captura actividades en tiempo real del kernel.
 
     _[https://learn.microsoft.com/en-us/sysinternals/downloads/procmon](https://hcisj.com/data/file/article/2023080005/13-39.pdf)_
 
@@ -365,3 +365,12 @@ El impacto trasciende lo técnico, afectando directamente el cumplimiento normat
   </EventFiltering>
 </Sysmon>
 ````
+
+### Referencias
+*[1] M. Russinovich, “Process Monitor,” Microsoft Docs, 2023. [Online]. Available: https://learn.microsoft.com/en-us/sysinternals/downloads/procmon*
+
+*[2] Sysinternals, “Sysmon Documentation,” Microsoft Docs, 2023. [Online]. Available: https://learn.microsoft.com/en-us/sysinternals/downloads/sysmon*
+
+*[3] Huang, Y. T., Guo, Y. R., Wong, G. W., & Chen, M. C. 2024. A Cascade Approach for APT Campaign Attribution in System Event Logs: Technique Hunting and Subgraph Matching. arXiv preprint arXiv:2410.22602.*
+
+*[4] Breed, J., Baker, P., Chu, K. D., Starr, C., Fox, J., & Baitinger, M. 2000. The spacecraft emergency response system (SERS) for autonomous mission operations. Reducing the Cost of Spacecraft Ground Systems and Operations, 2021*
